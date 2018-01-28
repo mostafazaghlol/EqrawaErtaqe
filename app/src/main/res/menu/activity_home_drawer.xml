@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/moshaf"
+            android:icon="@drawable/quran"
+            android:title="تلاوات وشيوخ" />
+        <item
+            android:id="@+id/moshafread"
+            android:icon="@drawable/quran"
+            android:title="المصحف" />
+        <item
+            android:id="@+id/fatawa"
+            android:icon="@drawable/quran"
+            android:title="فتاوى" />
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/person_gray"
+            android:title="الملف الشخصي" />
+        <item
+            android:id="@+id/sound_mail"
+            android:icon="@drawable/phone_gray"
+            android:title="الرسالة الصوتية" />
+        <item
+            android:id="@+id/rate"
+            android:icon="@drawable/star"
+            android:title="التقييم" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/signout"
+            android:title="تسجيل خروج" />
+    </group>
+
+
+</menu>

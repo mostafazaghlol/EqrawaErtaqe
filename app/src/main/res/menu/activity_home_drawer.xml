@@ -23,6 +23,10 @@
             android:icon="@drawable/phone_gray"
             android:title="الرسالة الصوتية" />
         <item
+            android:id="@+id/youtube_view"
+            android:icon="@drawable/youtube"
+            android:title="Youtube" />
+        <item
             android:id="@+id/rate"
             android:icon="@drawable/star"
             android:title="التقييم" />

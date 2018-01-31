@@ -11,7 +11,7 @@ import android.view.View;
 
 public class Splash extends Activity {
 
-    private static int Splash_time_out=4000;
+    private static int Splash_time_out=2000;
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
 
     @Override

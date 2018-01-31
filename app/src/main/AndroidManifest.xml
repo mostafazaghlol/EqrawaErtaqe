@@ -24,6 +24,10 @@
         <activity android:name=".Login" />
         <activity android:name=".SignUp" />
         <activity android:name=".Call_US" />
+        <activity android:name=".YoutubeActivity"
+            android:parentActivityName=".Home">
+
+        </activity>
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"

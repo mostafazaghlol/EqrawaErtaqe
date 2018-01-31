@@ -1,11 +1,14 @@
 package com.example.androiddeveloper.eqrawaertaqe;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
+import android.app.Fragment;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -119,6 +122,9 @@ public class Home extends AppCompatActivity
             fatwa fatwa = new fatwa();
             FragmentManager manager  = getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.fragment_container,fatwa,fatwa.getTag()).commit();
+        }else if(id == R.id.youtube_view){
+            Intent newAct = new Intent(this, YoutubeActivity.class);
+            startActivity(newAct);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

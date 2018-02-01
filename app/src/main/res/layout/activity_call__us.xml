@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background1"
-    tools:context="com.example.androiddeveloper.eqrawaertaqe.Call_US">
+    android:background="@drawable/background"
+    tools:context="com.alsalilweb.androiddeveloper.eqrawaertaqe.Call_US">
 
     <TextView
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="70dp"
-        android:background="@drawable/button2">
+        android:background="@android:color/white">
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/facebook_icon"/>
+            android:background="@drawable/facebook"/>
 
     </LinearLayout>
     <LinearLayout
@@ -51,7 +51,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:background="@drawable/button2">
+        android:background="@android:color/white">
 
         <TextView
             android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/twitter_icon"/>
+            android:background="@drawable/twitter"/>
 
     </LinearLayout>
 
@@ -79,7 +79,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:background="@drawable/button2">
+        android:background="@android:color/white">
 
         <TextView
             android:layout_width="wrap_content"
@@ -98,7 +98,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/gmail_icon"/>
+            android:background="@drawable/gmail"/>
 
     </LinearLayout>
 
@@ -107,7 +107,7 @@
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:background="@drawable/button2">
+        android:background="@android:color/white">
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/linkedin_icon"/>
+            android:background="@drawable/linkedin"/>
 
     </LinearLayout>
 

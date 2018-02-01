@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.example.androiddeveloper.eqrawaertaqe"
+        applicationId "com.alsalilweb.androiddeveloper.eqrawaertaqe"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -31,4 +31,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.joanzapata.pdfview:android-pdfview:1.0.4@aar'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androiddeveloper.eqrawaertaqe">
+    package="com.alsalilweb.androiddeveloper.eqrawaertaqe">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -13,23 +14,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash">
+        <activity android:name="com.alsalilweb.androiddeveloper.eqrawaertaqe.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main" />
-        <activity android:name=".Login" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".Call_US" />
-        <activity android:name=".YoutubeActivity"
-            android:parentActivityName=".Home">
-
+        <activity android:name="com.alsalilweb.androiddeveloper.eqrawaertaqe.Call_US" />
+        <activity android:name="com.alsalilweb.androiddeveloper.eqrawaertaqe.YoutubeActivity"
+            android:parentActivityName="com.alsalilweb.androiddeveloper.eqrawaertaqe.Home"
+            android:theme="@style/AppTheme">
         </activity>
         <activity
-            android:name=".Home"
+            android:name="com.alsalilweb.androiddeveloper.eqrawaertaqe.Home"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

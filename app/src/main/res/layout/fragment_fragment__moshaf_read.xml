@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.androiddeveloper.eqrawaertaqe.Fragment_MoshafRead">
+    tools:context="com.alsalilweb.androiddeveloper.eqrawaertaqe.Fragment_MoshafRead">
 
     <Spinner
+
         android:id="@+id/planets_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:background="#4ef037"
+        android:layout_height="30dp" />
     <com.joanzapata.pdfview.PDFView
         android:id="@+id/pdfview"
         android:layout_width="match_parent"

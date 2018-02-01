@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">إقرأ وإرتقي</string>
-    <string name="title_activity_home">مرحبا بك في إقرأ وإرتقي</string>
+    <string name="app_name">قرانى حياتى</string>
+    <string name="title_activity_home">مرحبا بك في قرانى حياتى</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

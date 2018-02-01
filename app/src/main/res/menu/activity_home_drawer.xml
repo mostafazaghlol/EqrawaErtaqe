@@ -15,17 +15,13 @@
             android:icon="@drawable/quran"
             android:title="فتاوى" />
         <item
-            android:id="@+id/profile"
-            android:icon="@drawable/person_gray"
-            android:title="الملف الشخصي" />
-        <item
             android:id="@+id/sound_mail"
-            android:icon="@drawable/phone_gray"
+            android:icon="@drawable/icphoneintalkblack"
             android:title="الرسالة الصوتية" />
         <item
             android:id="@+id/youtube_view"
             android:icon="@drawable/youtube"
-            android:title="Youtube" />
+            android:title="المصحف المرتل" />
         <item
             android:id="@+id/rate"
             android:icon="@drawable/star"

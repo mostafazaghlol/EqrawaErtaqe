@@ -5,12 +5,12 @@
     android:layout_height="@dimen/nav_header_height"
     android:gravity="center|left"
     android:orientation="vertical"
-    android:background="#faf6e0"
+    android:background="#07B91C"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
         android:src="@drawable/logo" />
 

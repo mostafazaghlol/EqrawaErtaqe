@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background1"
-    tools:context="com.example.androiddeveloper.eqrawaertaqe.Fragment_Rate">
+    android:background="@drawable/background"
+    tools:context="com.alsalilweb.androiddeveloper.eqrawaertaqe.Fragment_Rate">
 
     <ImageView
         android:layout_width="100dp"

@@ -1,6 +1,8 @@
 package com.alsalilweb.androiddeveloper.eqrawaertaqe;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,6 +13,10 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+
+import co.mobiwise.materialintro.shape.Focus;
+import co.mobiwise.materialintro.shape.FocusGravity;
+import co.mobiwise.materialintro.view.MaterialIntroView;
 
 public class YoutubeActivity extends YouTubeBaseActivity {
     Button b;
@@ -23,10 +29,12 @@ public class YoutubeActivity extends YouTubeBaseActivity {
         super.onStop();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube);
+        getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtubeViewer);
         listView = (ListView)findViewById(R.id.list);
         String[] array =  getResources().getStringArray(R.array.Quran_array);
@@ -56,25 +64,24 @@ public class YoutubeActivity extends YouTubeBaseActivity {
         };
         youTubePlayerView.initialize("AIzaSyCxIDO5PtAnPY6Y_DO-u07Z1SVo8guVH7Q", onInitializedListener);
 
+        new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.CENTER)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(500)
+                .enableFadeAnimation(true)
+                .performClick(true)
+                .setInfoText("تقدر تختار الصوره الى تريد الاستماع اليها من هنا")
+                .setTarget(listView)
+                .setUsageId("intro_card") //THIS SHOULD BE UNIQUE ID
+                .show();
     }
 
     public void hi(View view) {
         onBackPressed();
     }
 
-//    @Override
-//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-//        super.onRestoreInstanceState(savedInstanceState);
-//        numberOfSwra = savedInstanceState.getInt("numberOfSwra");
-//        currentTimeMillis = savedInstanceState.getInt("currentTimeMillis");
-//    }
-//
-//    @Override
-//    protected void onSaveInstanceState(Bundle bundle) {
-//        super.onSaveInstanceState(bundle);
-//        bundle.putInt("numberOfSwra",numberOfSwra);
-//        bundle.putInt("currentTimeMillis",currentTimeMillis);
-//    }
 
 
 }

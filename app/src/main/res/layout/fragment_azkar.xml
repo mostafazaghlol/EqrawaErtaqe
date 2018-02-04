@@ -3,18 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.alsalilweb.androiddeveloper.eqrawaertaqe.Fragment_MoshafRead">
-
-    <Spinner
-
-        android:id="@+id/planets_spinner"
-        android:layout_width="match_parent"
-        android:background="@color/colorAccent"
-        android:layout_height="50dp" />
+    tools:context="com.alsalilweb.androiddeveloper.eqrawaertaqe.Fragment_Azkar">
     <com.joanzapata.pdfview.PDFView
-        android:id="@+id/pdfview"
+        android:id="@+id/pdfview2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-
 </LinearLayout>

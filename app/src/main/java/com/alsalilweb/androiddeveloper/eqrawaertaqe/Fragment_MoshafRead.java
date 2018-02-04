@@ -16,6 +16,10 @@ import android.widget.TextView;
 
 import com.joanzapata.pdfview.PDFView;
 
+import co.mobiwise.materialintro.shape.Focus;
+import co.mobiwise.materialintro.shape.FocusGravity;
+import co.mobiwise.materialintro.view.MaterialIntroView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,6 +54,7 @@ public class Fragment_MoshafRead extends Fragment {
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                     ((TextView) parent.getChildAt(0)).setGravity(Gravity.CENTER);
                     String item= (String) parent.getSelectedItem();
+
                     switch (item){
                         case "الفاتحة":
                             pdfView.jumpTo(0);
@@ -471,6 +476,20 @@ public class Fragment_MoshafRead extends Fragment {
             } );
 
 
+            new MaterialIntroView.Builder(getActivity())
+                    .enableDotAnimation(true)
+                    .enableIcon(false)
+                    .setFocusGravity(FocusGravity.CENTER)
+                    .setFocusType(Focus.MINIMUM)
+                    .setDelayMillis(0)
+                    .enableFadeAnimation(true)
+                    .performClick(false)
+                    .setInfoText("من هنا تقدر تختار السوره     ")
+                    .setTarget(spinner)
+                    .setUsageId("intro_card2") //THIS SHOULD BE UNIQUE ID
+                    .show();
+
+
         }catch (Exception e){
             Log.e("Fragment_MoshafRead",e.getMessage());
         }
@@ -488,4 +507,5 @@ public class Fragment_MoshafRead extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         getActivity().setTitle("القرأن الكريم");
     }
+
 }

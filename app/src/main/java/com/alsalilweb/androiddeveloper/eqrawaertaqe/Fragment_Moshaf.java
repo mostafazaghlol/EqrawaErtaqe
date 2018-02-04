@@ -50,11 +50,11 @@ public class Fragment_Moshaf extends Fragment {
                 @Override
                 public void run() {
                     int progress = 0;
-                    while (progress <= 20) {
+                    while (progress <= 10) {
                         try {
                             progDailog.setProgress(progress);
                             progress++;
-                            Thread.sleep(200);
+                            Thread.sleep(300);
                         } catch (Exception e) {
 
                         }
@@ -80,7 +80,7 @@ public class Fragment_Moshaf extends Fragment {
         textView = (TextView)MyView.findViewById(R.id.text);
         if(isConnected(getActivity())) {
             webView.getSettings().setJavaScriptEnabled(true);
-            webView.loadUrl("http://www.quran-now.com/playlist/5539578756726784/%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%A8%D8%A7%D8%B3%D8%B7-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%B5%D9%85%D8%AF-%D8%B1%D9%88%D8%A7%D9%8A%D8%A9-%D9%88%D8%B1%D8%B4");
+            webView.loadUrl("http://www.quran-now.com/");
         }else {
             webView.setVisibility(View.GONE);
             textView.setVisibility(View.VISIBLE);

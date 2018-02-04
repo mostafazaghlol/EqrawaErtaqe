@@ -4,7 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/moshaf"
-            android:icon="@drawable/quran"
+            android:icon="@drawable/micro"
             android:title="تلاوات وشيوخ" />
         <item
             android:id="@+id/moshafread"
@@ -12,8 +12,8 @@
             android:title="المصحف" />
         <item
             android:id="@+id/fatawa"
-            android:icon="@drawable/quran"
-            android:title="فتاوى" />
+            android:icon="@drawable/pray"
+            android:title="اذكار الصباح والمساء" />
         <item
             android:id="@+id/sound_mail"
             android:icon="@drawable/icphoneintalkblack"

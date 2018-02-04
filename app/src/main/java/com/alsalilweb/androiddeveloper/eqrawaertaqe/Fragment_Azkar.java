@@ -10,18 +10,20 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.TextView;
+
+import com.joanzapata.pdfview.PDFView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class fatwa extends Fragment {
+public class Fragment_Azkar extends Fragment {
     View myView;
-    TextView textView;
+//    TextView textView;
+    public PDFView pdfView = null;
 
-    public fatwa() {
+
+    public Fragment_Azkar() {
         // Required empty public constructor
     }
 
@@ -30,23 +32,16 @@ public class fatwa extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        myView = inflater.inflate(R.layout.fragment_fatwa, container, false);
-        WebView webView = (WebView)myView.findViewById(R.id.webView5);
-        textView = (TextView)myView.findViewById(R.id.text2);
-       if(isConnected(getActivity())) {
-           webView.getSettings().setJavaScriptEnabled(true);
-           webView.loadUrl("https://fatwa.islamonline.net/");
-       }else {
-           webView.setVisibility(View.INVISIBLE);
-           textView.setVisibility(View.VISIBLE);
-       }
+        myView = inflater.inflate(R.layout.fragment_azkar, container, false);
+        pdfView = (PDFView) myView.findViewById(R.id.pdfview2);
+        pdfView.fromAsset("azkar.pdf").swipeVertical(true).load();
         return myView;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("فتاوى");
+        getActivity().setTitle("اذكار الصباح والمساء");
     }
 
     public static boolean isConnected(Context context) {

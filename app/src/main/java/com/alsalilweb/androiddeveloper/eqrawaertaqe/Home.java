@@ -21,6 +21,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import co.mobiwise.materialintro.shape.Focus;
+import co.mobiwise.materialintro.shape.FocusGravity;
+import co.mobiwise.materialintro.shape.ShapeType;
+import co.mobiwise.materialintro.view.MaterialIntroView;
+
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     android.support.v4.app.Fragment[] fragments;
@@ -33,9 +38,9 @@ public class Home extends AppCompatActivity
     private NetworkInfo networkInfo = null;
 
     public Home() {
-        fragments = new android.support.v4.app.Fragment[]{new Fragment_Moshaf(), new Fragment_MoshafRead(), new fatwa(), new Fragment_VoiceMail(), new Fragment_Rate()};
+        fragments = new android.support.v4.app.Fragment[]{new Fragment_Moshaf(), new Fragment_MoshafRead(), new Fragment_Azkar(), new Fragment_VoiceMail(), new Fragment_Rate()};
         fragmentTAGS = new String[]{"fragment1_tag", "fragment2_tag", "fragment3_tag", "fragment4_tag", "fragment5_tag"};
-        titles = new String[]{"تلاوات وشيوخ", "القرآن الكريم", "فتاوى", "الرسائل الصوتيه", "Youtube", "التقييم"};
+        titles = new String[]{"تلاوات وشيوخ", "القرآن الكريم", "فتاوى", "الرسائل الصوتيه", "Youtube","التقييم"};
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
@@ -55,6 +60,18 @@ public class Home extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+                new MaterialIntroView.Builder(this)
+                .enableDotAnimation(true)
+                .enableIcon(false)
+                .setFocusGravity(FocusGravity.RIGHT)
+                .setFocusType(Focus.MINIMUM)
+                .setDelayMillis(300)
+                .enableFadeAnimation(true)
+                .performClick(true).setShape(ShapeType.CIRCLE)
+                .setInfoText("قائمة البرنامج   ")
+                .setTarget(toolbar)
+                .setUsageId("intro_card25") //THIS SHOULD BE UNIQUE ID
+                .show();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -72,14 +89,31 @@ public class Home extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            //super.onBackPressed();
+            Out();
+
         }
     }
+    private void Out(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+        builder.setTitle("انذار الخروج");
+        builder.setMessage("هل تريد الخروج ؟ ");
+        builder.setPositiveButton("نعم", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("لا", null);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
 
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.home, menu);
+
         return true;
     }
 
@@ -98,47 +132,31 @@ public class Home extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.moshaf) {
-//                Fragment_Moshaf fragment_moshaf= new Fragment_Moshaf();
-//                FragmentManager manager = getSupportFragmentManager();
-//                manager.beginTransaction().replace(R.id.fragment_container, fragment_moshaf,fragment_moshaf.getTag()).commit();
             position = 0;
         } else if (id == R.id.moshafread) {
-//            Fragment_MoshafRead fragment_moshafRead = new Fragment_MoshafRead();
-//            FragmentManager manager = getSupportFragmentManager();
-//            manager.beginTransaction().replace(R.id.fragment_container, fragment_moshafRead,fragment_moshafRead.getTag()).commit();
             position = 1;
         } else if (id == R.id.sound_mail) {
-//            Fragment_VoiceMail fragment_voiceMail = new Fragment_VoiceMail();
-//            FragmentManager manager = getSupportFragmentManager();
-//            manager.beginTransaction().replace(R.id.fragment_container, fragment_voiceMail,fragment_voiceMail.getTag()).commit();
             position = 3;
         } else if (id == R.id.rate) {
-//            Fragment_Rate fragment_rate = new Fragment_Rate();
-//            FragmentManager manager = getSupportFragmentManager();
-//            manager.beginTransaction().replace(R.id.fragment_container, fragment_rate,fragment_rate.getTag()).commit();
             position = 4;
         } else if (id == R.id.logout) {
             AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
-            builder.setTitle("Logout Alert");
-            builder.setMessage("Are you sure to Logout");
-            builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+            builder.setTitle("انذار الخروج");
+            builder.setMessage("هل تريد الخروج ؟ ");
+            builder.setPositiveButton("نعم", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     finish();
                 }
             });
-            builder.setNegativeButton("No", null);
+            builder.setNegativeButton("لا", null);
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
 
         } else if (id == R.id.fatawa) {
-//            fatwa fatwa = new fatwa();
-//            FragmentManager manager  = getSupportFragmentManager();
-//            manager.beginTransaction().replace(R.id.fragment_container,fatwa,fatwa.getTag()).commit();
+
             position = 2;
         } else if (id == R.id.youtube_view) {
 
